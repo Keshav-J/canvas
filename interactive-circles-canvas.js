@@ -59,7 +59,7 @@ canvas.addEventListener('mousemove', function(event) {
 	// console.log(event);
 	mouse.x = event.x;
 	mouse.y = event.y;
-	console.log(mouse);
+	// console.log(mouse);
 });
 
 window.addEventListener('resize', function(event) {
@@ -78,7 +78,8 @@ function animate() {
 
 function init() {
 	circleArray = [];
-	for(var i=0 ; i<window.innerWidth ; ++i) {
+	var N = Math.max(canvas.width, canvas.height);
+	for(var i=0 ; i<N ; ++i) {
 		var radius = 30;
 		var x = Math.floor(Math.random() * window.innerWidth) - radius;
 		var y = Math.floor(Math.random() * window.innerHeight) - radius;
